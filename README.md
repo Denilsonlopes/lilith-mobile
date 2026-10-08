@@ -1,14 +1,18 @@
-# Lilith Mobile v0.2
+# Lilith Mobile v0.3
 
-Evolução da v0.1 com aprendizado por relações e comunicação por voz.
+Mudança principal: a memória deixa de ser apenas uma busca textual.
 
-## Exemplo
-Ensine: `Quando eu disser bom dia, responda Bom dia.`
-Depois diga `bom dia`. A Lilith deve responder `Bom dia.`
+A versão inclui:
+- relações estruturadas gatilho → resposta;
+- interpretação aproximada de perguntas por similaridade de palavras;
+- prioridade para relações antes de memória textual;
+- conhecimento separado de relações;
+- voz de entrada/saída quando disponível no navegador;
+- backup da memória.
 
-## Voz
-- 🎙️ você fala e o navegador tenta transformar sua fala em texto;
-- 🔊 Lilith fala as respostas usando SpeechSynthesis;
-- no iPhone, permita o microfone quando solicitado.
+Teste:
+1. Ensine: Quando eu disser "bom dia", responda "Bom dia".
+2. Depois escreva: bom dia
+3. Ela deve responder: Bom dia.
 
-O reconhecimento de fala via Web Speech API tem compatibilidade mais limitada que a síntese; Safari iOS oferece reconhecimento na web, mas permissões/configurações do aparelho podem afetar o funcionamento.
+Esta versão ainda é a camada de memória/associação. O próximo passo é conectar um motor cognitivo de linguagem, mantendo identidade e memória separadas.
